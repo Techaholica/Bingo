@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Bingo Generator</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/bingo.css" />
+</head>
+<body>
+	<!--Test if Google JQuery is available. If not use a local copy-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		if (!window.jQuery) 
+		{
+			document.write('<script src="/js/jquery1_10_2.js"><\/script>');
+		}
+	</script>
+	<script type="text/javascript" src="js/bingo.js"></script>
+	
+	<!-- the options panel -->
+	<div id="panel">
+	<span id="optionsMenu">Options Menu</span>
+	<span class="btn_cancel_outer"><a href="#"><img id="cancel_btn" class="btn_cancel" src="./redx.png"></a></span><br><br>
+	<label> Define the possible Bingo squares</label>
+	<div id="TableDivOptions"></div>
+	<div id="addRowBtn">Add Row</div>
+	<div id="additionalOptions">
+		<label>Additional options</label><br><br>
+		<table>
+			<tr>
+				<td>
+					Number of cards: <input type="text" size="2"  maxLength="2" id="numCards" value="5">
+				</td>
+				<td>
+					Width of cards: <input type="text" size="3" maxLength="3" value="85" id="cardWidth">
+					<select id="cardMeasurement">
+						<option value="%" selected>percent</option>
+						<option value="px">pixels</option>
+					</select>
+				</td>
+				<td>
+					Banner URL: <input type="text" id="banner_location" size="25" value="http://techaholica.com/bingo/Bingo.png">
+				</td>
+				<td>
+					Background Color: <input type="text" size="5" id="bgColor" value="#E6E6E6">
+				</td>
+		</table>
+	</div>
+	<div class="slide_inner"><a href="#" class="btn_slide" id="ok_btn">OK</a></div>
+	</div>
+	<div id ="options_menu">
+	<div class="option"><a href="http://techaholica.com"><img class="options_button" src="./back.png" title="Return to Techaholica" id="backBtn"></a></div>
+	<div class="option"><a href="#"><img class="options_button" src="./refresh.png" title="Refresh Page" id="refreshBtn"></a></div>
+	<div class="option"><a href="#"><img class="options_button" src="./options.png" title="Open the options menu" id="optionsBtn"></a></div>
+	<div class="option"><a href="#"><img class="options_button" src="./redx.png" title="Close this menu bar" id="closeBtn"></a></div>
+	</div>
+	
+	<!--the cards under the pull down options menu-->
+	<div id="BingoFormsParentDiv"></div>
+
+</body>
+</html>
